@@ -1,15 +1,17 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2513
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\froman\fcharset0 Times-Roman;
-\f3\froman\fcharset0 Times-Italic;\f4\fmodern\fcharset0 Courier;}
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-Roman;
+\f3\froman\fcharset0 Times-Italic;\f4\fmodern\fcharset0 Courier;\f5\froman\fcharset0 Times-BoldItalic;
+}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;\red174\green0\blue240;
-\red251\green2\blue7;}
+\red251\green2\blue7;\red253\green128\blue8;}
 {\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c93333;\cssrgb\c74609\c21796\c95404;
-\cssrgb\c100000\c14913\c0;}
+\cssrgb\c100000\c14913\c0;\cssrgb\c100000\c57637\c0;}
 \margl1440\margr1440\vieww16840\viewh11280\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0\b\fs36 \cf0 La machine virtuelle:
-\f1\b0\fs24 \
+\f0\fs24 \cf0 su
+\f1\b\fs36 La machine virtuelle:
+\f0\b0\fs24 \
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f2\fs28 \cf2 \expnd0\expndtw0\kerning0
@@ -22,32 +24,32 @@ Les machines physiques, \'e9quip\'e9es d'un {\field{\*\fldinst{HYPERLINK "https:
 Les machines virtuelles permettent d'ex\'e9cuter simultan\'e9ment plusieurs syst\'e8mes d'exploitation sur un seul ordinateur, comme une {\field{\*\fldinst{HYPERLINK "https://www.redhat.com/fr/topics/linux/whats-the-best-linux-distro-for-you"}}{\fldrslt \ul \ulc2 distribution Linux\'ae}} sur un ordinateur portable sous MacOS. Chacun des syst\'e8mes d'exploitation s'ex\'e9cute sur le mat\'e9riel h\'f4te comme le ferait n'importe quel autre syst\'e8me d'exploitation ou application. L'exp\'e9rience de l'utilisateur final \'e9mul\'e9e au sein de la machine virtuelle est donc quasiment identique \'e0 celle offerte par un syst\'e8me d'exploitation ex\'e9cut\'e9 en temps r\'e9el sur une machine physique.\'a0\'a0\
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf2 Fonctionnement d'une machine virtuelle:\
+\f1\b\fs36 \cf2 Fonctionnement d'une machine virtuelle:\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f2\b0\fs28 \cf2 La {\field{\*\fldinst{HYPERLINK "https://www.redhat.com/fr/topics/virtualization"}}{\fldrslt \cf3 \ul \ulc3 technologie de virtualisation}} vous permet de partager un syst\'e8me avec de nombreux environnements virtuels. L'hyperviseur g\'e8re le mat\'e9riel et s\'e9pare les ressources physiques des environnements virtuels. Ces ressources sont partitionn\'e9es selon les besoins \'e0 partir de l'environnement physique et distribu\'e9es aux machines virtuelles.\
 Lors de l'ex\'e9cution d'une machine virtuelle, si un utilisateur ou un programme lance une instruction qui sollicite des ressources suppl\'e9mentaires de la part de l'environnement physique, l'hyperviseur planifie la demande aupr\'e8s des ressources du syst\'e8me physique afin que le syst\'e8me d'exploitation et les applications de la machine virtuelle puissent acc\'e9der au pool partag\'e9 de ressources physiques.\
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf2 Types d'hyperviseurs:\
+\f1\b\fs36 \cf2 Types d'hyperviseurs:\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f2\b0\fs28 \cf2 Il existe deux\'a0types d'hyperviseurs qui peuvent \'eatre utilis\'e9s pour virtualiser des ressources.\
 \pard\pardeftab720\sa319\partightenfactor0
 
-\f0\b\fs24 \cf2 Type\'a01\
+\f1\b\fs24 \cf2 Type\'a01\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f2\b0\fs28 \cf2 Un hyperviseur de type\'a01 s'installe sur un syst\'e8me bare metal. L'hyperviseur planifie directement les ressources des machines virtuelles sur le mat\'e9riel. La solution KVM est un hyperviseur de type\'a01.Elle a \'e9t\'e9 int\'e9gr\'e9e au {\field{\*\fldinst{HYPERLINK "https://www.redhat.com/fr/topics/linux/what-is-the-linux-kernel"}}{\fldrslt \cf3 \ul \ulc3 noyau Linux\'ae}} en\'a02007. Si vous utilisez une version r\'e9cente de {\field{\*\fldinst{HYPERLINK "https://www.redhat.com/fr/topics/linux/what-is-linux"}}{\fldrslt \cf3 \ul \ulc3 Linux}}, vous b\'e9n\'e9ficiez donc d\'e9j\'e0 d'un acc\'e8s \'e0 KVM.\'a0\
 \pard\pardeftab720\sa319\partightenfactor0
 
-\f0\b\fs24 \cf2 Type\'a02\
+\f1\b\fs24 \cf2 Type\'a02\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f2\b0\fs28 \cf2 Un hyperviseur de type\'a02 est h\'e9berg\'e9. Les ressources des machines virtuelles sont planifi\'e9es au niveau d'un syst\'e8me d'exploitation h\'f4te, lui-m\'eame ex\'e9cut\'e9 sur le mat\'e9riel. VMware\'a0Workstation et Oracle\'a0VirtualBox sont des exemples d'hyperviseurs de type\'a02.\'a0\
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf2 Pourquoi utiliser une machine virtuelle\'a0?:\
+\f1\b\fs36 \cf2 Pourquoi utiliser une machine virtuelle\'a0?:\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f2\b0\fs28 \cf2 La consolidation du serveur est l'une des principales raisons qui justifient l'utilisation de machines virtuelles. La plupart des syst\'e8mes d'exploitation et des applications n'utilisent qu'une petite partie des ressources physiques disponibles lorsqu'ils sont d\'e9ploy\'e9s sur un syst\'e8me bare metal. Gr\'e2ce \'e0 la virtualisation de vos serveurs, vous disposez de nombreux serveurs virtuels sur chaque serveur physique, ce qui permet d'optimiser l'utilisation du mat\'e9riel.\'a0\
@@ -58,12 +60,12 @@ Comme les machines virtuelles sont isol\'e9es, elles peuvent \'eatre utilis\'e9e
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b\fs36 \cf2 Wikipedia:
+\f1\b\fs36 \cf2 Wikipedia:
 \f2\b0\fs24 \
 \pard\pardeftab720\sa240\partightenfactor0
 
 \fs28 \cf2 En {\field{\*\fldinst{HYPERLINK "https://fr.wikipedia.org/wiki/Informatique"}}{\fldrslt \cf3 \ul \ulc3 informatique}}, une 
-\f0\b machine virtuelle
+\f1\b machine virtuelle
 \f2\b0  (anglais 
 \f3\i virtual machine
 \f2\i0 , abr. 
@@ -79,7 +81,7 @@ L'usage de machines virtuelles est l'un des principes fondamentaux de la technol
 \fs24 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b\fs36 \cf2 Aide de Oracle VM VirtualBox
+\f1\b\fs36 \cf2 Aide de Oracle VM VirtualBox
 \f2\b0\fs24 \
 \pard\pardeftab720\sa240\partightenfactor0
 
@@ -87,7 +89,7 @@ L'usage de machines virtuelles est l'un des principes fondamentaux de la technol
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \pard\pardeftab720\sa240\qc\partightenfactor0
 
-\f0\b\fs36 \cf4 D\'e9roulement du projet\cf2 \
+\f1\b\fs36 \cf4 D\'e9roulement du projet\cf2 \
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f2\b0\fs28 \cf2 Pour r\'e9aliser ce projet nous allons nous servir du logiciel de virtualisation VirtualBox qui est present sur l\'92ordinateur.\
@@ -112,12 +114,12 @@ Au pas suivant on nous demande de choisir le
 \f2\i0\fs28 \cf2 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b\fs36 \cf2 Hostname:
+\f1\b\fs36 \cf2 Hostname:
 \f2\b0  
 \fs28 etiquette attribuee a un appareil connect\'e9 a un r\'e9seau informatique qui permet de l\'92identifier par exemple sur internet\
 La fen\'eatre suivante nous demande un domain name mais comme la donner ne nous demande rien a ce sujet, on \'e9crit rien \
 
-\f0\b\fs36 Domain name:
+\f1\b\fs36 Domain name:
 \f2\b0\fs28  ensemble d\'92ordinateurs relies ensemble et partageant une caract\'e9ristique commune\
 Il est temps de cr\'e9er un 
 \f3\i\fs36 \cf5 mot de passe administrateur du root
@@ -137,7 +139,7 @@ On choisit un mot de passe pour notre nouvel utilisateur avec les memes regles q
 On configure l\'92heure de la time zone en l\'92occurence ce sera Madrid\
 La fen\'eatre suivante est pour le partitionment du disque, comme je veux faire les bonus il faut choisir manuel pour pouvoir \'e9diter les partitions une a une\
 La fen\'eatre suivante nous montre nos partitions et points de montage et nous n\'92avons actuellement aucune partition de faite. On choisit le p\'e9riph\'e9rique sur lequel nous voulons le cr\'e9er et dans ce cas il n\'92y a qu\'92un choix de possible
-\f0\b \
+\f1\b \
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f2\b0 \cf2 On accepte la confirmation suivante qui nous dit que si il y a deja des partitions sur le p\'e9riph\'e9rique, elles seront supprim\'e9es\
@@ -147,7 +149,7 @@ On cree la nouvelle partition selon la donnee soit \'93sda1\'94 500m\
 On choisit le type de partition qui dans ce cas sera primaire vu qu\'92on voudra y installer l\'92 OS\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b\fs36 \cf2 Les types de partition:
+\f1\b\fs36 \cf2 Les types de partition:
 \f2\b0\fs24 \
 \pard\pardeftab720\sa240\partightenfactor0
 
@@ -204,7 +206,7 @@ Finish\
 On peut maintenant voir toutes nos partitions et espace libre et les partitions logiques, nous devons les configurer pour s\'e9lectionner le syst\'e8me de fichiers que nous voulons et le point de montage indique par le sujet. Nous allons dans l\'92ordre et nous s\'e9lectionnons le premier qui apparait qui est home\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b\fs36 \cf2 Point de montage: 
+\f1\b\fs36 \cf2 Point de montage: 
 \f2\b0\fs28 repertoire a partir duquel sont accessibles les donn\'e9es se trouvant sous forme d\'92un syst\'e8me de fichiers sur une partition de disque dur ou un peripherique\
 On va dans use as:\
 On choisit le syst\'e8me d\'92archive qui est le plus utilise avec Linux soit ext4\
@@ -224,20 +226,20 @@ On choisit notre pays, en l\'92occurence l\'92Espagne\
 On choisit le mirror de notre region deb.debian.org\
 On laisse le choix du proxy vide\
 
-\f0\b\fs36 Proxy:
+\f1\b\fs36 Proxy:
 \f2\b0\fs28  composant logiciel informatique qui joue le r\'f4le d\'92interm\'e9diaire en se pla\'e7ant entre deux hotes pour faciliter ou surveiller leurs \'e9changes\
 On nous demande si les programmeurs de virtual box peuvent se servir de nos informations, on les envoie chier\
 On enl\'e8ve toutes les additions de programme suppl\'e9mentaires\
 Il faut installer grub boot loader qui n\'92existe pas encore dans ce bordel\
 
-\f0\b\fs36 Boot loader:
+\f1\b\fs36 Boot loader:
 \f2\b0\fs28  logiciel permettant de lancer un ou plusieurs syst\'e8mes d\'92exploitations sur la m\'eame machine\
 
-\f0\b\fs36 GNU GRUB:
+\f1\b\fs36 GNU GRUB:
 \f2\b0\fs28   https://www.gnu.org/software/grub/On choisit le p\'e9riph\'e9rique pour le boot loader ce sera le pr\'e9s\'e9lectionne Ata vbox\
 On appuie sur continue \
 
-\f0\b\fs36 Configuration de la machine virtuelle:\
+\f1\b\fs36 Configuration de la machine virtuelle:\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f2\b0\fs28 \cf2 On nous demande notre code, le code d\'92encryptage,  qui est le dernier que j\'92ai cree soit 
@@ -245,10 +247,10 @@ On appuie sur continue \
 \fs28 \cf2 \
 On nous demande d\'92introduire le nom d\'92utilisateur et le code mais pas de l\'92admin soit ageiser avec le code Pleiades42.\
 On est enfin pr\'eat a configurer notre machine virtuelle\
-Installation de SUDO et configuration des utilisateurs et groupesPleia\
+Installation de SUDO et configuration des utilisateurs et groupes\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b\fs36 \cf2 SUDO:\
+\f1\b\fs36 \cf2 SUDO:\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f2\b0\fs28 \cf2 Substitute User DO, Super User DO ou Switch User DO. La commande su [vide] nova amen au root user et su [ageiser] passe au simple user\
@@ -285,7 +287,7 @@ pour verifier tout le passage sudo, on tape la commande getent group sudo et get
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b\fs36 \cf2 Installation et configuration de ssh\
+\f1\b\fs36 \cf2 Installation et configuration de ssh\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f2\b0\fs28 \cf2 SSH: Secure Shell, protocole de communication s\'e9curis\'e9. Il impose une cl\'e9 de chiffrement. Tous les segments TCP seront chiffres. Sa fonction principale est l\'92acces a distance a un serveur via un canal s\'e9curis\'e9 dans lequel toutes les informations ont crypt\'e9es\
@@ -303,19 +305,19 @@ Pour finir on doit r\'e9initialiser  le service ssh pour que les modifications s
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b\fs36 \cf2 Installation et configuration de UFW
+\f1\b\fs36 \cf2 Installation et configuration de UFW
 \f2\b0\fs28 \
 
-\f0\b\fs36 UFW:
+\f1\b\fs36 UFW:
 \f2\b0\fs28  uncomplicated Firewall, est un programme informatique pour g\'e9rer un pare-feu netfilter\
 
-\f0\b\fs36 Pare-feu:
+\f1\b\fs36 Pare-feu:
 \f2\b0\fs28  logiciel ou materiel permettant de faire respecter la politique de s\'e9curit\'e9 du r\'e9seau. Definition des types de communications autorises sur ce r\'e9seau informatique. Surveillance  et contr\'f4le des applications et flus de donnees.\
 
-\f0\b\fs36 Netfilter:
+\f1\b\fs36 Netfilter:
 \f2\b0\fs28  framework implementant un firewall au sein du noyau Linux\
 
-\f0\b\fs36 Framework:
+\f1\b\fs36 Framework:
 \f2\b0\fs28   environnement de d\'e9veloppement. Ensemble coherent de composants logiciels structurels qui sert a cr\'e9er les fondations ainsi que les grandes lignes d\'92un logiciel, c\'92est a dire une architecture.\
 Premiere chose a faire, installer ufw avec la commande sudo apt install ufw, confirmation avec y\
 Une fois installe, nous devons l\'92activer, pour ca nous utilisons la commande suivante: sudo ufw enable, il nous retournera que le firewall est actif\
@@ -323,11 +325,13 @@ Une fois installe, nous devons l\'92activer, pour ca nous utilisons la commande 
 \cf2 Maintenant, ce que nous devons faire est de faire en sorte que notre pare-feu autorise les connexions effectu\'e9es via le port 4242. Nous le ferons avec la commande suivante: sudo ufw allow 4242\
 Pour terminer  nous testons  que nous avons correctement configure le ufw en regardant l\'92\'e9tat de notre pare-feu et que les connections se passant via le port 4242 sont autoris\'e9es. Commande: sudo ufw status\
 \
+\pard\pardeftab720\partightenfactor0
 
-\f0\b\fs36 Configurer un code fort pour sudo\
+\f1\b\fs36 \cf2 Configurer un code fort pour sudo\
+\pard\pardeftab720\partightenfactor0
 
-\f2\b0\fs28 Se rendre dans le fichier racine: cd .. cd ..
-\f0\b\fs36 \
+\f2\b0\fs28 \cf2 Se rendre dans le fichier racine: cd .. cd ..
+\f1\b\fs36 \
 
 \f2\b0\fs28 On cree un fichier dans le chemin /etc/sudoers.d/de mon fichier. Je l\'92appelle sudo_config parce que la configuration du mot de passe sera stocke dns ce fichier. La commande est : touch /etc/sudoers.d/sudo_config\
 On doit cr\'e9er le repertoire sudo dans le chemin /var/log parce que chaque commande que nous ex\'e9cutons avec sudo, tant avec input que output doit rester stock\'e9e dans ce repertoire. Commande mkdir /var/log/sudo\
@@ -346,7 +350,7 @@ Ctrl x y enter\
 \
 \pard\pardeftab720\partightenfactor0
 
-\f0\b\fs36 \cf2 Configuration de la politique de code forte
+\f1\b\fs36 \cf2 Configuration de la politique de code forte
 \f4\b0\fs24 \
 \
 \
@@ -368,87 +372,87 @@ enforce_for_root nous impementons ceci pour l\'92utilisateur root\
 Ctrl x, y\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b\fs36 \cf2 Se connecter via SSH\
+\f1\b\fs36 \cf2 Se connecter via SSH\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f2\b0\fs28 \cf2 Pour se connecter par ssh on doit fermer la machine, ouvrir virtual box et aller sur configuration\
 On va dans l\'92onglet network, r\'e9glages avances, port forwarding\
 Ajouter en haut a droite\
 Host port et guest port doivent \'eatre sur 4242, ok, ok\
-Pour pouvoir nous connecter a la machine virtuelle depuis la machine r\'e9elle, nous rallumons la machine virtuelle, nous devons ouvrir un terminal sur la machine r\'e9elle et \'e9crire : ssh ageiser@localhost -p 4242. Il nous demandera le mot de passe Pleiades42- et une fois entre, le login apparaitra en vert et cela signifiera que nous sommes connect\'e9s  \
+Pour pouvoir nous connecter a la machine virtuelle depuis la machine r\'e9elle, nous rallumons la machine virtuelle, nous devons ouvrir un terminal sur la machine r\'e9elle et \'e9crire : ssh ageiser@localhost -p 4242. Il nous demandera le mot de passe Pleiades42.su et une fois entre, le login apparaitra en vert et cela signifiera que nous sommes connect\'e9s  \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b\fs36 \cf2 Script\
+\f1\b\fs36 \cf2 Script\
 Script, 
 \f2\b0\fs28 programme informatique en langage interpr\'e9t\'e9. Sequence de commande gard\'e9e dans un fichier qui quand il s\'92execute, execute lea fonction de chaque commande\
 
-\f0\b\fs36 Architecture
+\f1\b\fs36 Architecture
 \f2\b0\fs28 . Pour pouvoir voir l\'92architecture de l-os on peut taper la commande: uname -a\
 Pour afficher le nombre de 
-\f0\b\fs36 processeurs physiques
+\f1\b\fs36 processeurs physiques
 \f2\b0\fs28 , on utilise le fichier /proc/cpuinfo qui fournit des informations sur le processeur, type, marque etc, nous utilisons la commande: grep \'93physical id\'94 /proc/cpuinfo | wc -l. Avec la commande grep (recherche), nous recherchons dans le fichier physical id et avec w -l on compte les lignes du r\'e9sultat de grep. Nous le faisons car la faconde quantifier les processeurs n\'92est pas courante. Si il n\'92z a pas de processeurs, il marquera 0 et si il y a un processeur ou plus il affichera toutes les informations. De cette fa\'e7on, nous compterons simplement le lignes qu-il y a car c\'92est plus simple de quantifier de cette fa\'e7on \
 Pour montrer le nombre de 
-\f0\b\fs36 processeur virtuel
+\f1\b\fs36 processeur virtuel
 \f2\b0\fs28  c\'92est similaire au point precedent avec la commande: grep processor /proc/cpuinfo | wc -l\
 Pour montrer la 
-\f0\b\fs36 memoire ram
+\f1\b\fs36 memoire ram
 \f2\b0\fs28  nous utiliserons la commande free pour voir sur le moment les infos de la ram. Free --help nous donne des infos sur cette commande. Nous utilisons la commande free --mega  parce que dans le sujet c\'92est demande.\
 Une fois fait cette commande, on doit filter les informations re\'e7ues parce qu\'92on pas besoin de tout, le premier point util est la memoire utilis\'e9e, pour ca on utilise la commande: awk permet de filter les information qu\'92on cherche dans un fichier pour finir nous comparions si le premier mot d\'92un file est \'e9gale a MEM, nous afficherons le troisi\'e8me mot de la ligne qui est la memoire utilis\'e9e. La commande complete est: free \'97mega | awk \'91$1 == \'93Mem:\'94 \{print $3\}\'92. Dans le script, la valeur de retour de cette commande est assignee a une variable qui nus concat\'e8ne avec les autres variables pour que tout este \'e9gal comme le sp\'e9cifie le sujet\
 Pour obtenir la memoire totale on affiche la deuxi\'e8me collone. Commande: free \'97mega | aww \'91$1 ==\'93Mem:\'94 \{print $2\}\'92\
-pour la partie ultime de la ram on doit calculer le % de memoire utilis\'e9e. La commande est aussi similaire aux pr\'e9c\'e9dentes ne modifiant que la fa\'e7on dont les informations doivent \'eatre affich\'e9es. \outl0\strokewidth0 Comme l'op\'e9ration pour obtenir le pourcentage n'est pas exacte, elle peut nous donner de nombreuses d\'e9cimales et seulement 2 apparaissent dans le sujet, nous ferons donc de m\'eame, c'est pourquoi nous utilisons %.2f pour que seules 2 d\'e9cimales soient affich\'e9es. Une autre chose que vous ne savez peut-\'eatre pas, c'est que dans printf pour afficher un %, vous devez mettre %%. L'int\'e9gralit\'e9 de la commande: free --mega | awk '$1 == "M\'e9mo\'a0:" \{printf("(%.2f%%)\\n", $3/$2*100)\}'.\
-\pard\pardeftab720\sa240\partightenfactor0
+pour la partie ultime de la ram on doit calculer le % de memoire utilis\'e9e. La commande est aussi similaire aux pr\'e9c\'e9dentes ne modifiant que la fa\'e7on dont les informations doivent \'eatre affich\'e9es. Comme l'op\'e9ration pour obtenir le pourcentage n'est pas exacte, elle peut nous donner de nombreuses d\'e9cimales et seulement 2 apparaissent dans le sujet, nous ferons donc de m\'eame, c'est pourquoi nous utilisons %.2f pour que seules 2 d\'e9cimales soient affich\'e9es. Une autre chose que vous ne savez peut-\'eatre pas, c'est que dans printf pour afficher un %, vous devez mettre %%. L'int\'e9gralit\'e9 de la commande: free --mega | awk '$1 == "M\'e9mo\'a0:" \{printf("(%.2f%%)\\n", $3/$2*100)\}'.\
 
-\f0\b\fs36 \cf2 Memoire disque
+\f1\b\fs36 Memoire disque
 \f2\b0\fs28 \
 Pour pouvoir voir l\'92a memoire disque libre et utilis\'e9e ose sert de la commande df qui signifie disk filesystem, utilis\'e9e pour obtenir un resume complet de l\'92utilisation du disque. Le sujet indique que la memoire utilis\'e9e est en MB donc on utilise le flag -m. Ensuite on fait un gap pour nous montrer seulement les lignes qui contienne \'93/dev/\'93 et ensuite un autre grep avec le flag -v pour exclure les lignes contenant \'93/boot\'94. Enfin l\'92a commande awk et on additionne la valeur du troisi\'e8me mot de chaque ligne et afficher le r\'e9sultat final de la somme la commande enti\'e8re est: df -m | grep "/dev/" | grep -v "/boot" | awk '\{memory_use += $3\} END \{print memory_use\}'\
 Pour obtenir l\'92espace total nous utilisons une commande similaire. Les uniques differences que nous additionnerons les valeurs de $2 plut\'f4t que $3 et la deuxi\'e8me difference est que nous voulons la valeur en GB. Pour ca nous devons diviser le numero par 1024 et enlever les d\'e9cimales. Commande: 
 \f4\fs24 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f2\fs28 \cf2 \outl0\strokewidth0 df -m | grep "/dev/" | grep -v "/boot" | awk '\{memory_result += $2\} END \{printf (\'93%.0fGb\\n\'94), memory_result/1024\}\'92\
-Pour finir on doit montrer un pourcentage de la memoire utilis\'e9e. Pour ca encore qqch de similaire. Cette fois-ci on veut deux variables, une pour la memoire utilis\'e9e y l-autre pour la totale. Nous utiliserons une operation pour obtenir le % soit use/total*100 et le r\'e9sultat de cette operation on l\'92affichera selon le sujet, entre parenth\'e8se et avec le symbole %. La commande: \outl0\strokewidth0 df -m | grep "/dev/" | grep -v "/boot" | awk '\{use += $3\} \{total += $2\} END \{printf("(%d%%)\\n"), use/total*100\}'\
+\f2\fs28 \cf2 df -m | grep "/dev/" | grep -v "/boot" | awk '\{memory_result += $2\} END \{printf (\'93%.0fGb\\n\'94), memory_result/1024\}\'92\
+Pour finir on doit montrer un pourcentage de la memoire utilis\'e9e. Pour ca encore qqch de similaire. Cette fois-ci on veut deux variables, une pour la memoire utilis\'e9e y l-autre pour la totale. Nous utiliserons une operation pour obtenir le % soit use/total*100 et le r\'e9sultat de cette operation on l\'92affichera selon le sujet, entre parenth\'e8se et avec le symbole %. La commande: df -m | grep "/dev/" | grep -v "/boot" | awk '\{use += $3\} \{total += $2\} END \{printf("(%d%%)\\n"), use/total*100\}'\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b\fs36 \cf2 Pourcentage de cpu utilise
+\f1\b\fs36 \cf2 Pourcentage de cpu utilise
 \f2\b0\fs28 \
-\outl0\strokewidth0 Nous utilisons la commande vmstat pour ca, cela montre les statistiques syst\'e8me. Dans mon cas je mettrai un intervalle de 1 a 4 secondes. On donne aussi la commande tail -1 qui nous affichera que la derni\'e8re ligne donc pour les 4 lignes genette on n\'92affichera que la derni\'e8re. On ne veut que e mot 15 qui est l\'92utilisation de la memoire disponible.  La commande enti\'e8re est : \outl0\strokewidth0 vmstat 1 4 | tail -1 | awk '\{print %15\}\'92. Le r\'e9sultat de cette commande es seulement une partie du r\'e9sultat final parce qu-il faut encore fare une operation dans le script pour que ca se passe bien. Ce que nous aurons \'e0 faire est de soustraire de 100 le montant que notre commande nous a renvoy\'e9, nous imprimerons le r\'e9sultat de cette op\'e9ration avec une d\'e9cimale et un % \'e0 la fin et l'op\'e9ration serait effectu\'e9e\
+Nous utilisons la commande vmstat pour ca, cela montre les statistiques syst\'e8me. Dans mon cas je mettrai un intervalle de 1 a 4 secondes. On donne aussi la commande tail -1 qui nous affichera que la derni\'e8re ligne donc pour les 4 lignes genette on n\'92affichera que la derni\'e8re. On ne veut que e mot 15 qui est l\'92utilisation de la memoire disponible.  La commande enti\'e8re est : vmstat 1 4 | tail -1 | awk '\{print %15\}\'92. Le r\'e9sultat de cette commande es seulement une partie du r\'e9sultat final parce qu-il faut encore fare une operation dans le script pour que ca se passe bien. Ce que nous aurons \'e0 faire est de soustraire de 100 le montant que notre commande nous a renvoy\'e9, nous imprimerons le r\'e9sultat de cette op\'e9ration avec une d\'e9cimale et un % \'e0 la fin et l'op\'e9ration serait effectu\'e9e\
 
-\f0\b\fs36 Dernier d\'e9marrage
+\f1\b\fs36 Dernier d\'e9marrage
 \f2\b0\fs28 \
 Pour voir l\'92heure et la date de notre dernier d\'e9marrage nous utilisons la commande: whoa veg le flag -b qui nous montrera la dur\'e9e du dernier d\'e9marrage du syst\'e8me. Nous filtrons les informations avec awk. On affiche la ligne 3 et 4 avec un espace entre deux la commande enti\'e8re est la suivante: who -b | awk '$1 == "system" \{
-\f0\b print
+\f1\b print
 \f2\b0  $3 " " $4\}'\
 
-\f0\b\fs36 Utilisation de LVM\
+\f1\b\fs36 Utilisation de LVM\
 LVM, 
 \f2\b0\fs28 logical volume management, logiciel de gestion de l\'92utilisation des espaces de stockage d\'92un ordinateur\
 Pour verifier que LVM est actif, on utilise la commande lsblk qui nous donnera des informations sur toutes les m\'e9moires de l\'92ordi: SSD, disque dur\'85\
 On commande par un if qui nous donnera un retour en yes or no. basiquement la condition que nous cherchons est de conter le nombre de ligne ou apparait LVM et si il y en a plus que 0 on retourne yes, si 0 no. La commande est : if [ $(lsblk | grep "lvm" | wc -l) -gt 0 ]; then echo yes; else echo no; fi\
 
-\f0\b\fs36 Connections TCP
+\f1\b\fs36 Connections TCP
 \f2\b0\fs28 \
-Pour voir le nombre de connection tcp \'e9tabli, on utilise la commande ss qui se substitue a netstat qui est obsolete. On filtre avec le flag -ta pour ne montrer que les connections tcp. On fait une recherche avec wc -l pour citer le nomdbre de ligne. La commande est:  ss -ta | grep ESTAB | wc -l\
+Pour voir le nombre de connection tcp \'e9tabli, on utilise la commande ss qui se substitue a netstat qui est obsolete. On filtre avec le flag -ta pour ne montrer que les connections tcp. On fait une recherche avec wc -l pour citer le nombre de ligne. La commande est:  ss -ta | grep ESTAB | wc -l\
 
-\f0\b\fs36 Nombre d\'92utilisateur
+\f1\b\fs36 Nombre d\'92utilisateur
 \f2\b0\fs28 \
 Avec la commande user, ce la affichera le nombre d\'92utilisateur existant. On ajoute le flag wc -w pour citer la quantit\'e9 de mot qu-il y a en sortie de commande la commande enti\'e8re est: 
 \f4\fs24 users | wc -w\
 
-\f0\b\fs36 Adresse IP et MAC
-\f2\b0\fs28 \outl0\strokewidth0 \
+\f1\b\fs36 Adresse IP et MAC
+\f2\b0\fs28 \
 Adresse IP: numero d\'92identification attribue de fa\'e7on provisoire ou permanente a chaque p\'e9riph\'e9rique relie a un r\'e9seau informatique qui utilise l\'92Internet Protocol\
 Adresse MAC: Media Access Control, ou adresse physique est un identifiant physique stocke dans une carte r\'e9seau. \
 Pour obtenir l\'92adresse du Host on utilise la commande hostname -I et pour obtenir l\'92adresse MAC la commande ip link. Comme il apparait plus d\'92une interface on utilise la commande grep pour chercher ce que l\'92on souhaite et ainsi pouvoir afficher seulement ce qu\'92on nous demande. Commande : \
-\outl0\strokewidth0 ip link | grep "link/ether" | awk '\{print $2\}' , de cette bacon on affichera sue l\'92adresse MAC\
+ip link | grep "link/ether" | awk '\{print $2\}' , de cette bacon on affichera sue l\'92adresse MAC\
 
-\f0\b\fs36 Nombre de commandes ex\'e9cut\'e9es avec SUDO
+\f1\b\fs36 Nombre de commandes ex\'e9cut\'e9es avec SUDO
 \f2\b0\fs28 \
 On utilise pour ca la commande: journalctl qui est un outil qui se charge de collecter et g\'e9rer les registres syst\'e8mes. On ajoute  _comm=sudo pour filtrer les entrees. Dans notre cas comm qui fait reference a un script executable. On refitre avec un grep COMMAND pour les fois ou on commence et fini une cession il y a des infos dont on se fout. Un wc -l pour sortir des lignes num\'e9rot\'e9es.la commande enti\'e8re est :  journalctl _COMM=sudo | grep COMMAND | wc -l. Pour verifier que que ca fonctionne correctement on envie la commande dans le terminal on fait une commande incluant sudo et on refait la commande et ca devrait avoir incr\'e9ment\'e9 le nombre d\'92execution de sudo.\
 
-\f0\b\fs36 Script final
+\f1\b\fs36 Script final
 \f2\b0\fs28 :\
+\pard\pardeftab720\sa240\partightenfactor0
 
-\f4\fs24 #!/bin/bash\
+\f4\fs24 \cf2 #!/bin/bash\
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 # ARCH\
@@ -507,10 +511,130 @@ wall "	Architecture: $arch\
 	Network: IP $ip ($mac)\
 	Sudo: $cmnd cmd"\
 \
+\pard\pardeftab720\partightenfactor0
 
-\f0\b\fs36 Crontab
-\f4\b0\fs24 \
-\pard\pardeftab720\sa240\partightenfactor0
+\f1\b\fs36 \cf2 Crontab\
+\pard\pardeftab720\partightenfactor0
 
-\f2\fs28 \cf2 \
+\f2\b0\fs28 \cf2 Gestionnaire de processus en arri\'e8re plan, les processus seront executes moment programme dans Crontab\
+Pour configurer correctement crontab on doit \'e9diter son fichier ave la commande: sudo crontab -u root -e, on choisit l\'92editeur et comme j-\'91ai tout fait avec nano, je continue\
+On doit ajouter une ligne de commande qui est */10 * * * * sh /ruta del script c\'92est une commande qui s\'92executera toutes les 10 minutes\
+\
+Les param\'e8tres de Crontab: 	m-> correspond au nombre de minutes ou va s\'92executer le script\
+					h -> correspond a l\'92heure ou doit s\'92executer le script\
+					dom correspond au jour du mois\
+					mon le mois\
+					dow le jour de la semaine de 1 a 7\
+					user defini l\'92utilisateur qui va executer le script\
+					command -> route du script a executer \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs36 \cf2 Signature.txt\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 Pour obtenir la signature, l\'92a premiere chose a faire est \'e9teindre la machine virtuelle car a chaque fois qu\'92on l-allume ou qu\'92on fait une modification, la signature changera\
+Le pas suivant est de se retrouver avec le terminal standard dans le dossier dans lequel on a notre fichier .vdi de notre machine virtuelle dans sgoinfre\
+\pard\pardeftab720\partightenfactor0
+
+\f5\i\b\fs48 \cf6 Avec la commande shasum Born2BeRoot.vdi ca nous donnera la signature. Cette signature nous l\'92ajouterons a notre fichier signature.txt pour plus tart metre le fichier dans le repertoire de l\'92intra.  On r\'e9ouvre la machine. La signature change. Pour les corrections, se souvenir de cloner la machine pour ne pas craindre que la signature change \cf5 Attention, \'e9tape on termine\cf6 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\i0\b0\fs28 \cf2 Shamus est une commande qui permet de verifier l-integrite d\'92un fichier en faisant la somme du contr\'f4le du hash SHA-1 d\'92un fichier\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs36 \cf2 Bonus:\
+Lighttpd:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 Lighttpd est un serveur web d\'e9sign\'e9 pour \'eatre rapide sur et flexible. Optimise pour les environnements ou la vitesse est importante. Il consomme moins de CPU et de RAm que les autres serveurs\
+On installe le package lighted avec la commande: sudo apt install lighttpd\
+On permet les connections via le port 80 avec la commande sudo ufw allow 80\
+On verifie que ca roule avec la commande sudo ufw status\
+On ajoute la r\'e8gle du port 80 comme on l\'92a fait dans virtual box pour le port 4242\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs36 \cf2 MariaDB:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 MariaDB est une base de donne. Utilise a des fins de stockage de donn\'e9es, de commerce \'e9lectronique, des fonctions au niveau de l\'92entreprise et les applications de tenue de registre.\
+On installe les paquets avec la commande: sudo apt install mariadb-server\
+\'c9tant donn\'e9 que la configuration par d\'e9faut laisse votre installation MariaDB non s\'e9curis\'e9e, nous utiliserons un script fourni par le package mariadb-server pour restreindre l'acc\'e8s au serveur et supprimer les comptes inutilis\'e9s. Nous allons ex\'e9cuter le script avec la commande suivante: sudo mysql_secure_installation. Une fois ex\'e9cut\'e9, le script nous posera une s\'e9rie de questions, notamment si nous voulons passer \'e0 l'authentification par socket Unix. Puisque nous avons d\'e9j\'e0 un compte root prot\'e9g\'e9 nous \'e9crirons Non\
+Change root password: n, on ne veut pas changer.Maradb n\'92est pas vraiment root puisqu\'92on lui donne des permissions utilisateurs\
+Remove anonymous users: y, par d\'e9faut il y a un utilisateur anonyme dans maria. On supprime ce user anonyme vu qu-\'91on g\'e8re tous les details\
+Disallow root login remotely: y, en deactivate la connection root a distance nous empechons qu-on modifier notre code. On ne peut se connecter que depuis localhost\
+Remove test database and access to it? : y 
+\f1\b\fs36 \cf5 a expliquer 
+\f2\b0\fs28 \cf2 \
+Reload privilege tables now? Y 
+\f1\b\fs36 \cf5 a expliquer\
+\pard\pardeftab720\partightenfactor0
+\cf2 Phpmyadmin:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 Phpmyadmin est une application web qui permet de g\'e9rer des bases de donn\'e9es de maniere simple et avec une interface conviviale\
+On installe le paquet avec la commande sudo apt install php_cgi php_mysql phpmyadmin\
+on tape mariadb\
+GRANT ALL PRIVILEGES ON * . * TO \'91phpmyadmin \'91@\'91 localhost\'92; \
+SHOW DATABASES\
+Exit\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs36 \cf2 Wordpress:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 Content management system Systeme de gestion de contenu axe sur la creation de tout type de page web\
+Commande: sudo apt install wget zip\
+Cd /var/www/\
+Sudo wget https://es.wordpress.org/latest-es_ES.zip\
+Sudo unzip latest-es_ES.zip\
+Sudo mv html/ html_old/\
+Sudo mv Wordpress/ html\
+Sudo chmod -R 755 html\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs36 \cf2 LiteSpeed:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 Logiciel de serveur Web propri\'e9taire. C\'92est le quatri\'e8me serveur web le plus populaire et est utilise par 10% des sites web.\
+On commence par mettre a jour \
+Sudo apt update\
+Sudo apt upgrade\
+Par faut, OpenLiteSpeed est disponible dans le referenciel de base Debian 11. On doit donc executer une commande pour ajouter le referential OPENLITESPEED a mon systeme Debian\
+wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | sudo bash\
+On refait une mise a jour sudo apt update\
+Sudo apt install openlitespeed\
+Le code de base pour OpenLiteSpeed es 123456. On la change pour qqch de plus sur avec la commande : sudo /usr/local/lsws/admin/misc/admpass.sh\
+Administrator:
+\f1\b\fs36  \cf5 ageiser\cf2 , 
+\f2\b0\fs28 password 
+\f1\b\fs36 \cf5 Pleiades42,\
+
+\f2\b0\fs28 \cf2 Nous configurons le firewall pour autoriser les connections via les ports 8088 et 7080\
+Commande: sudo ufw allow 8088/tcp\
+sudo ufw allow 7080/tcp\
+Sudo uff reload\
+Dans la fenetre de virtual box on ajoute les deux ports\
+Une fois termine  on peut se connecter 
+\f1\b\fs36 \
+
+\f2\b0\fs28 Dans le moteur de rechercher de notre navigateur on tape localhost:7080 en donn\'e2tes nos identifiant de connexion on doit avoir acc\'e8s a tout\
+\pard\pardeftab720\partightenfactor0
+\cf5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5\i\b\fs48 \cf6 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\i0\b0\fs28 \cf2 \
 }
