@@ -2,10 +2,12 @@
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\froman\fcharset0 Times-Roman;
 \f3\froman\fcharset0 Times-Italic;\f4\froman\fcharset0 Times-BoldItalic;\f5\fmodern\fcharset0 Courier;
 }
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;\red174\green0\blue240;
-\red251\green2\blue7;\red251\green2\blue7;\red128\green0\blue128;\red253\green128\blue8;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c93333;\cssrgb\c74609\c21796\c95404;
-\cssrgb\c100000\c14913\c0;\cssrgb\c100000\c14913\c0;\cssrgb\c57919\c12801\c57269;\cssrgb\c100000\c57637\c0;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;\red251\green2\blue255;
+\red251\green2\blue7;\red251\green2\blue7;\red128\green0\blue128;\red253\green128\blue8;\red127\green0\blue128;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c93333;\cssrgb\c100000\c25279\c100000;
+\cssrgb\c100000\c14913\c0;\cssrgb\c100000\c14913\c0;\cssrgb\c57919\c12801\c57269;\cssrgb\c100000\c57637\c0;\cssrgb\c57919\c12801\c57269;
+}
 \margl1440\margr1440\vieww16840\viewh23820\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
@@ -183,7 +185,7 @@ Logique: occupe une partie ou la totalit\'e9 de la partition \'e9tendue/primaire
 \f0\b\fs36 \
 UNIX:
 \f2\b0\fs28 \
-Syst\'e8me d\'92exploitation qui repose sur un interpr\'e9teur ou superviseur (le shell)\
+Syst\'e8me d\'92exploitation qui repose sur un interpreteur ou superviseur (le shell)\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f0\b\fs36 \cf2 Shell Unix:
@@ -450,7 +452,7 @@ Nous devons \'e9diter le fichier cr\'e9\'e9. Commande:
 \pard\pardeftab720\partightenfactor0
 
 \f5\fs24 \cf2 	Defaults  passwd_tries=3 // 3 tentatives possibles de faux code\
-	Defaults  badpass_message=\'93wrong password\'94 // message personalis\'e9 pour un mauvais code sudo\
+	Defaults  badpass_message=\'93wrong password\'94 // message personnalis\'e9 pour un mauvais code sudo\
 	Defaults  logfile="/var/log/sudo/sudo_config\'94// chaque action utilisant sudo sera archiv\'e9e dans ce fichier\
 	Defaults  log_input, log_output // les input et output seront archiv\'e9es dans le fichier suivant\
 	Defaults  iolog_dir="/var/log/sudo" //fichier in out\
@@ -484,7 +486,7 @@ Nous devons \'e9diter le fichier cr\'e9\'e9. Commande:
 -maxrepeat=3 il ne doit pas contenir plus de 3 memes caract\'e8res suivis  \
 -reject username, ne peut contenir le nom d\'92utilisateur\
 -difok=7, doit contenir au moins 7 caract\'e8res qui ne font pas partie de l\'92ancien code\
--enforce_for_root nous implementons ceci pour l\'92utilisateur root\
+-enforce_for_root nous impl\'e9mentons ceci pour l\'92utilisateur root\
 -Ctrl x, y\
 \pard\pardeftab720\sa240\partightenfactor0
 
@@ -838,9 +840,270 @@ LiteSpeed:\
 \f2\b0\fs28 -Dans le moteur de recherche de notre navigateur on tape localhost:7080 en donnant nos identifiants de connexion on doit avoir acc\'e8s a tout\
 \pard\pardeftab720\partightenfactor0
 \cf5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf2 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs72 \cf4 Corrections:
+\fs36 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 -dupliquer la machine virtuelle sinon c\'92est le merdier\
+-Alex pr\'e9sent\
+-signature.txt \'e0 giter a la racine de mon machin git\
+-Verifier que signature.txt de mon git est le m\'eame que mon .vdi qui se trouve a sgoinfre/Perso/ageiser/Born2BeRoot/Born2BeRoot.vdi\
+-taper la commande shasum Born2BeRoot.vdi pour afficher la signature\
+-d\'e9marrer la machine virtuelle clon\'e9e\
 \
 \pard\pardeftab720\partightenfactor0
-\cf2 Corrections:\
+
+\f0\b\fs36 \cf2 Partie obligatoire:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 -Comment fonctionne une machine virtuelle?\
+C\'92est un programme qui simule un OS et qui peut executer des programmes comme si c\'92\'e9tait un ordinateur r\'e9el.\
+-Pourquoi choisir Debian?\
+Premi\'e8rement parce que Debian est chaudement recommand\'e9, ensuite j\'92ai un syst\'e8me linux chez moi donc ca m\'92\'e9tait utile. Rocky est plus d\'e9di\'e9 aux entreprises\
+-difference en rocky et Debian?\
+https://sourceforge.net/software/compare/Debian-vs-Rocky-Linux/\
+-La finalit\'e9 d\'92une machine virtuelle?\
+\pard\pardeftab720\partightenfactor0
+\cf2 \outl0\strokewidth0 \strokec2 Son objectif est de fournir un environnement d'ex\'e9cution ind\'e9pendant de la plate-forme mat\'e9rielle et syst\'e8me d'exploitation.
+\f5\fs24 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs28 \cf2 \outl0\strokewidth0 -En choisissant Debian, quelle difference entre apt, aptitude de APPArmor. Pendant l\'92evaluation le script doit s\'92afficher toutes les 10 minutes. Ses actions seront v\'e9rifi\'e9es plus tard\
+aptitude est une version am\'e9lior\'e9e de apt qui g\'e8re mieux les d\'e9pendances des paquets. Aptitude include plus d\'92options que apt ce sont deux lignes de commande. On connais surtout apt-get. APT = Advanced Packaging Tool.\
+Apparmor est une application de s\'e9curit\'e9 syst\'e8me. Permet de restreindre les capacit\'e9s d\'92un programme \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf2 Simple setup:\
+
+\f2\b0\fs28 -On d\'e9marre la machine virtuelle et comme elle nous propose pas d\'92interface graphique c\'92est qu\'92on l\'92a programm\'e9e sans, on peut aussi taper la commande: 
+\f0\b\fs36 \cf7 ls /usr/bin/*session. 
+\f2\b0\fs28 \cf2 Si /usr/bin/dbus-run-session s\'92affiche c\'92est que je n\'92ai pas utilise de m\'e9thode graphique\
+On tape le code 
+\f0\b\fs36 \cf6 Pleiades42-\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 user login : 
+\f0\b\fs36 \cf6 ageiser
+\f2\b0\fs28 \cf2 , code: 
+\f0\b\fs36 \cf6 Pleiades42.
+\f2\b0\fs28 \cf2 \
+Pour voir les r\'e8gles des codes, on se met en mode root soit 
+\fs36 \cf7 su root, 
+\fs48 \cf6 Born2be42. 
+\fs28 \cf2 On tape 
+\f0\b\fs36 \cf7 nano /etc/login.defs\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 On modifie un autre fichier :
+\f0\b\fs36 \cf7  nano /etc/pam.d/common-password
+\f2\b0\fs28 \cf2 \
+A la premiere ligne non comment\'e9e on a fait des modifications\
+-verifier que le service UFW est actif: 
+\f0\b\fs36 \cf7 sudo ufw status\
+
+\f2\b0\fs28 \cf2 -verifier que le service ssh est actif :
+\f0\b\fs36 \cf7  sudo service ssh status
+\f2\b0\fs28 \cf2 \
+-verifier que le syst\'e8me choisi est rocky ou Debian: 
+\f0\b\fs36 \cf7 uname -v
+\f2\b0\fs28 \cf2  ou 
+\f0\b\fs36 \cf7 uname --kernel-version
+\f2\b0\fs28 \cf2 \
+\
+
+\f0\b\fs36 User:\
+
+\f2\b0\fs28 -verifier que l\'92utilisateur cree est bien xxx42 et qu\'92il appartient au groupe sudo et user42 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 getent group sudo
+\f2\b0\fs28 \cf2 , getent commande get entries pour une grande base de donn\'e9es 
+\f0\b\fs36 \cf7 \
+getent group user42\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 -cr\'e9er un nouvel utilisateur et montrer la politique de code forte cr\'e9\'e9e
+\f0\b\fs36 \cf7  \
+sudo adduser xxx\cf2  
+\f2\b0\fs28  // 
+\f0\b\fs36 \cf4 sudo deluser xxx
+\f2\b0\fs28 \cf2 \
+Essayer jusqu\'92\'e0 ce que le code fonctionne\
+Ajouter un groupe evaluating 
+\f0\b\fs36 \cf7 sudo addgroup evaluating
+\f2\b0\fs28 \cf2   // 
+\f0\b\fs36 \cf4 sudo delgroup evaluating
+\f2\b0\fs28 \cf2 \
+Ajouter le nouvel utilisateur a ce groupe 
+\f0\b\fs36 \cf7 sudo adduser xxx evaluating
+\f2\b0\fs28 \cf2 \
+Verifier ce qu\'92on vient de faire avec 
+\f0\b\fs36 \cf7 getent group evaluating
+\f2\b0\fs28 \cf2 \
+\
+\
+
+\f0\b\fs36 Hostname and partitions:
+\f2\b0\fs28 \
+-Verifier que le hostname de la machine est un login correct de 42, donc pour moi ageiser42\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 hostname\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 -modifier le hostname pour le remplacer par celui de l\'92utilisateur
+\f0\b\fs36 \cf7 \
+sudo nano /etc/hostname 
+\f2\b0\fs28 \cf2 (student42)\
+-Modifier notre login par le nouveau\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 sudo nano /etc/hosts\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 -Red\'e9marrer la machine\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 sudo reboot
+\f2\b0\fs28 \cf2 \
+Une fois red\'e9marr\'e9 et avoir indique notre code Pleiades42-, on constate que le user42 est different\
+-on remet le host nameoriginal\
+-montrer les partitions\
+
+\f0\b\fs36 \cf7 lsblk
+\f2\b0\fs28 \cf2 , verifier que ca correspond a la donn\'e9e\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf2 Sudo:
+\f2\b0\fs28 \
+-verifier que sudo est bien install\'e9\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 sudo -V\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 -assigner un nouvel utilisateur au groupe sudo\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 sudo adduser xxx sudo \cf4 // sudo deluser xxx sudo\
+\cf7 getent group sudo
+\f2\b0\fs28 \cf2 \
+-montrer les r\'e8gles sudo impos\'e9es dans le sujet\
+
+\f0\b\fs36 \cf7 nano /etc/sudoers.d/sudo_config
+\f2\b0\fs28 \cf2 \
+-montrer que le chemin /var/log/sudo existe, qu\'92il contient au moins un fichier, on devrait y voir un historique des commandes utilis\'e9es avec sudo\
+
+\f0\b\fs36 \cf7 cd /var/log/sudo
+\f2\b0\fs28 \cf2 \
+
+\f0\b\fs36 \cf7 cat sudo_config\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 Faire une commande sudo et verifier que la liste est mise a jour\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 sudo nano hello
+\f2\b0\fs28 \cf2 \
+
+\f0\b\fs36 \cf7 cat sudo_config\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 UFW:\
+
+\f2\b0\fs28 -Verifier que le programme UFW est installe dans la machine virtuelle et verifier que ca marche correctement\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 dpkg -s ufw\
+sudo service ufw status\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 -Liste des r\'e8gles actives avec UFW\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 sudo ufw status numbered
+\f2\b0\fs28 \cf2 \
+-Ajoute un port et enl\'e8ve le \
+
+\f0\b\fs36 \cf7 sudo ufw allow 8080
+\f2\b0\fs28 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf9 sudo ufw status numbered
+\f2\b0\fs28 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 sudo ufw delete <num_rule>\
+\pard\pardeftab720\partightenfactor0
+\cf9 sudo ufw status numbered\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 SSH:\
+
+\f2\b0\fs28 -Verifier que le service ssh est installe et que ca tourne seulement sur le port 4242\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 which ssh\
+sudo service ssh status
+\f2\b0\fs28 \cf2 \
+-Utilise ssh pour commencer une nouvelle session avec le nouvel utilisateur cree, verifier qu\'92on ne peut pas utiliser ssh avec l\'92utilisateur root\
+Ouvrir un terminal standard \
+
+\f0\b\fs36 \cf7 ssh root@localhost -p 4242
+\f2\b0\fs28 \cf2 , ne doit pas fonctionner\
+
+\f0\b\fs36 \cf7 ssh ageiser@localhost -p 4242, 
+\f2\b0\fs28 \cf2 doit fonctionner 
+\f0\b\fs36 \cf6 Pleiades42.
+\f2\b0\fs28 \cf2 \
+
+\f0\b\fs36 \cf7 ssh xxx@localhost -p 4242 
+\f2\b0\fs28 \cf2 doit fonctionner aussi\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf2 Script monitoring:\
+
+\f2\b0\fs28 -Expliquer le script\
+Voir plus haut\
+-Qu\'92est ce que cron?\
+Utilitaire permettant d\'92accomplir des taches quand on le souhaite\
+-Changer le temps du script de 10 minutes a 1 minutes, \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 sudo crontab -u root -e, 
+\f2\b0\fs28 \cf2 on change 10 -> 1\
+\pard\pardeftab720\partightenfactor0
+\cf2 stopper le script quand le serveur a d\'e9marr\'e9 sans modifier le script lui-m\'eame.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 sudo /etc/init.d/cron stop\
+sudo /etc/init.d/cron start\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 Bonus:\
+
+\f2\b0\fs28 -Montrer les partitions cr\'e9\'e9es et verifier que ca correspond \'e0 la donn\'e9e\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs36 \cf7 lsblk
+\f2\b0\fs28 \cf2 \
+-configurer worldpress\
+Taper localhost dans le navigateur \
+\
+\
+\
+\
+\
 \
 \
 \
